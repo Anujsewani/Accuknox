@@ -54,8 +54,19 @@ jobs:
       id: install  
       
     - name: Update kube config
-      run: aws eks update-kubeconfig --name poc-accuknox-cluster
-      
+      env:
+        CLUSTER_NAME: ${{ secrets.CLUSTER_NAME_SECRET }}
+      run: aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }}
+
+    - name: Substitute variables in YAML files
+      env:
+        AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
+      run: |
+        for file in wisecow-deployment.yml  wisecow-ingress.yml; do
+          envsubst < $file > temp_$file
+          mv temp_$file $file
+        done     
+
     - name: Deploy to EKS
       run: |
        kubectl apply -f wisecow-deployment.yml
