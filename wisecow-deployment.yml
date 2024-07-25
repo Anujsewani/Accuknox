@@ -1,6 +1,17 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: poc-wisecow
+  labels:
+    name: poc-wisecow
+
+
+
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata: 
+  namespace: poc-wisecow
   name: wisecow-app
   labels: 
     app: wisecow-app
