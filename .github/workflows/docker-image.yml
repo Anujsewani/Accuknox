@@ -55,7 +55,7 @@ jobs:
       
     - name: Update kube config
       env:
-        CLUSTER_NAME: ${{ secrets.CLUSTER_NAME_SECRET }}
+        CLUSTER_NAME: ${{ secrets.EKS_CLUSTER_NAME }}
       run: aws eks update-kubeconfig --name ${{ env.CLUSTER_NAME }}
 
     - name: Substitute variables in YAML files
