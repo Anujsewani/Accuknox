@@ -31,14 +31,14 @@ spec:
           ports: 
             - containerPort: 4499
           livenessProbe:
-          httpGet:
-            path: /
-            port: 4499
-          initialDelaySeconds: 15
-          periodSeconds: 20
+            httpGet:
+              path: /
+              port: 4499
+            initialDelaySeconds: 15
+            periodSeconds: 20
           readinessProbe:
-          httpGet:
-            path: /
-            port: 4499
-          initialDelaySeconds: 5
-          periodSeconds: 10 
+            httpGet:
+              path: /
+              port: 4499
+            initialDelaySeconds: 5
+            periodSeconds: 10 
