@@ -81,11 +81,11 @@ wisecow-ingress.yml: Manages external access to services within the cluster. It 
 
 ## Usage
 
-1. **Clone the repository: Clone this repository to your local machine.
-2. **Configure GitHub secrets: Add the required secrets (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_ACCOUNT_ID, EKS_CLUSTER_NAME) in your GitHub repository settings.
-3. **Push changes: Push any changes to the main branch to trigger the CI/CD pipeline.
-4. **Monitor GitHub Actions: Monitor the GitHub Actions tab in your repository to track the progress of the CI/CD pipeline.
+1. **Clone the repository**: Clone this repository to your local machine.
+2. **Configure GitHub secrets**: Add the required secrets (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_ACCOUNT_ID, EKS_CLUSTER_NAME) in your GitHub repository settings.
+3. **Push changes**: Push any changes to the main branch to trigger the CI/CD pipeline.
+4. **Monitor GitHub Actions**: Monitor the GitHub Actions tab in your repository to track the progress of the CI/CD pipeline.
 
-##Conclusion
+## Conclusion
 
 This setup provides a robust CI/CD pipeline for deploying the Wisecow application to AWS EKS using GitHub Actions. By following the steps outlined in this README, you can automate the build, push, and deployment process, ensuring a smooth and efficient workflow.
